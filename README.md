@@ -1,10 +1,10 @@
 ## Description
 
-* Elasticsearch create search task
+* Elasticsearch JS create and search task
 
 ## Warning
 
-* The task mention the use of ElasticSearch js by setting the ELS config to 
+* The task mention the use of ElasticSearch JS by setting the ELS config to 
 ```yml
 http.cors.enabled: true
 ```
@@ -16,7 +16,7 @@ This is clearly not a recomanded way to use ELS, indeed sending http requests di
 ```bash 
 docker-compose up
 ``` 
-
+ 
 * Runing the container 
 ```bash 
 docker-compose start
@@ -31,4 +31,4 @@ Build & Run the webapp:
 ```bush
 npm start
 ```
-Open in the browser: [http://localhost:4200/](http://localhost:4200/)
+Open in the browser : [http://localhost:4200/](http://localhost:4200/)

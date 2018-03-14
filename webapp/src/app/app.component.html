@@ -1,0 +1,35 @@
+<h2>ElasticSearch : Create Search Task</h2>
+
+
+<form (ngSubmit)="onSubmit()">
+  <button type="submit" class="btn btn-primary pull-right">Click me !</button>
+</form>
+
+<br>
+<br>
+<div class="sb-search">
+  <div class="search-input-wrapper">
+    <form (ngSubmit)="onSearch()">
+      <input name="searchInput" class="sb-search-input"
+             [(ngModel)]="searchInput"
+             placeholder="Search...">
+      <button class="btn btn-primary pull-right">Search</button>
+    </form>
+  </div>
+  <!-- Search results -->
+  <div class="sb-seachresults" *ngIf="results && results.length>0">
+    <table class="sb-results" >
+      <thead><tr><th>Date</th><th>User Agent</th></tr></thead>
+      <tbody *ngFor="let result of results">
+        <tr>
+          <td>{{result.time | date : 'hh:MM dd/mm/yyyy'}}</td>
+          <td>{{result.userAgent | uppercase}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<br>
+<br>
+<div class="sb-message" *ngIf="!!message"><span class="title" style="color: #a961ff">INFO : </span><span>{{ message }}</span></div>
